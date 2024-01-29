@@ -1,0 +1,24 @@
+<html lang="es">
+<head>
+    <title>Ejemplo de prompt().</title>
+    <meta charset="UTF-8">
+    <script language="Javascript">
+            function muestraTexto() {
+                const parrafoTexto = document.getElementById("texto");
+                var texto = prompt("¡Este es un mensaje escrito mediante propmt()!.", "");
+                if (texto == null) {
+                     parrafoTexto.innerHTML = "Se ha pulsado el botón <b>Cancelar</b>.";
+                }
+                else if (texto=="") {
+                     parrafoTexto.innerHTML = "No se introducido ningún valor.";
+                }
+                else {
+                     parrafoTexto.innerHTML = "Se ha introducido el valor <b>" + texto + "<b>";
+                }
+            }
+    </script>
+</head>
+<body onload="muestraTexto()">
+        <p id="texto">Aquí se muestra el mensaje del usuario.</p>
+</body>
+</html>
